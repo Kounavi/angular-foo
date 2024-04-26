@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Troubleshooting:
+
+ If ng serve fails with:
+`sh: 1: node: Permission denied`
+Then try:
+`chmod -R a+x node_modules`
+`npm ci`
+`npm prune`

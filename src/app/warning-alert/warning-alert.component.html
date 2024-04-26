@@ -1,1 +1,9 @@
 <span>app is running but check issues!</span>
+<span>
+  &nbsp;<button class="btn btn-primary"
+                [disabled]="!allowNewServer"
+                (click)="onCreateServer()">Add Server</button>
+  <br/>
+  {{serverCreationStatus}}
+</span>
+
