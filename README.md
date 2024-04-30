@@ -26,11 +26,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-Troubleshooting:
+## Troubleshooting
 
- If ng serve fails with:
+ If `ng serve` fails with:
+
 `sh: 1: node: Permission denied`
-Then try:
-`chmod -R a+x node_modules`
-`npm ci`
-`npm prune`
+
+Try:
+```
+chmod -R a+x node_modules
+npm ci
+npm prune
+```
+
+If the problem still persists check whether the permissions are correctly set in the respective file or folder.
+Usually, permission issues in files / folders such as `~/.npm/_cacache/content-v2/sha-512/d6` can easily be fixed by executing `chown -R $USER:$USER <folder>`
