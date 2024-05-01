@@ -1,9 +1,16 @@
 <span>app is running but check issues!</span>
+<br/>
 <span>
+   <!--(input)="onUpdateServerName($event)"-->
+   <input type="text"
+          class="form-control"
+          [(ngModel)]="serverName"
+   >
+   {{serverName}}
   &nbsp;<button class="btn btn-primary"
                 [disabled]="!allowNewServer"
                 (click)="onCreateServer()">Add Server</button>
-  <br/>
-  {{serverCreationStatus}}
+   <br/>
+   {{serverCreationStatus}}
 </span>
 
