@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class PasswordComponent implements OnInit {
 
   isPasswordHidden = true;
-  buttonClicks = 0;
+  buttonClicks = [];
 
   constructor() {}
 
@@ -16,11 +16,11 @@ export class PasswordComponent implements OnInit {
 
   togglePassword(event: Event) {
     this.isPasswordHidden === true ? this.isPasswordHidden = false : this.isPasswordHidden = true;
-    this.buttonClicks++;
+    this.buttonClicks.push(this.buttonClicks.length + 1);
   }
 
   getPasswordBackgroundColour() {
-    return this.buttonClicks < 5 ? 'white' : '#6699CC';
+    return this.buttonClicks.length < 5 ? 'white' : '#6699CC';
   }
 
 }
